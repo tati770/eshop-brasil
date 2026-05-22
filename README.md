@@ -12,7 +12,9 @@ O objetivo é desenvolver uma solução que utilize tecnologias de banco de dado
 * **MongoDB Atlas (Cloud):** Banco de Dados NoSQL ideal para Big Data e documentos JSON flexíveis. Optou-se pela arquitetura em nuvem distribuída (SaaS) para garantir alta disponibilidade, escalabilidade horizontal e isolamento de recursos da máquina local. O MongoDB Atlas foi utilizado neste projeto como alternativa ao MongoDB local, pois o notebook utilizado apresentou limitações para executar corretamente o ambiente Docker. Dessa forma, o Atlas permitiu a utilização do banco de dados em nuvem de maneira prática e eficiente, mantendo todas as funcionalidades da aplicação. Além disso, a plataforma oferece fácil integração com Python e Streamlit, além de recursos de escalabilidade, segurança e disponibilidade importantes para aplicações modernas.
 * **Pandas:** Biblioteca de alto desempenho para manipulação, limpeza e concatenação de matrizes de dados.
 * **Faker:** Biblioteca para geração automatizada de dados volumosos sintéticos e realistas (Simulação de Big Data).
-* **Docker & Docker Compose:** Ferramentas de conteinerização integradas ao projeto para fins de portabilidade do ambiente de desenvolvimento.
+* **Docker & Docker Compose:** Ferramentas de conteinerização integradas ao projeto para fins de portabilidade do ambiente de desenvolvimento. Embora o banco de dados esteja na nuvem, o projeto esta funcional para rodar dentro do Docker.
+O arquivo Dockerfile foi utilizado para definir o ambiente da aplicação, configurando automaticamente a instalação das dependências necessárias, como Python, Streamlit e bibliotecas utilizadas no projeto. Ele permite criar um container padronizado, garantindo que a aplicação funcione da mesma forma em diferentes máquinas e ambientes.
+O arquivo docker-compose.yml foi utilizado para facilitar o gerenciamento e execução dos serviços da aplicação. Com ele, é possível iniciar todos os componentes necessários utilizando um único comando, simplificando a configuração do ambiente e a integração entre a aplicação Streamlit e o banco de dados MongoDB.
 
 ---
 
