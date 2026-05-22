@@ -15,7 +15,7 @@ from faker import Faker
 
 # === 2. CONFIGURAÇÕES DE CONEXÃO E BANCO DE DADOS ===
 
-# Conecta oficialmente ao servidor do MongoDB Atlas na Nuvem usando a sua rota de acesso.
+# Conecta oficialmente ao servidor do MongoDB Atlas na Nuvem usando a rota de acesso.
 client = MongoClient("mongodb+srv://tatyanesdo123_db_user:YSqjYKtfrzJlRkhx@cluster0.uxx0g0w.mongodb.net/eshop_brasil?retryWrites=true&w=majority&appName=Cluster0")
 
 # Acessa o banco de dados chamado "eshop_brasil".
@@ -40,7 +40,7 @@ st.title("📦 E-Shop Brasil - Gestão de Dados e Logística")
 menu = st.sidebar.selectbox("Selecione uma Função", ["Visualizar Pedidos", "Gerar Dados (Simulação)", "Gerenciar Estoque"])
 
 
-# === 4. MÓDULO 1: GERAR DADOS (INSERÇÃO / CREATE) ===
+# === 4. GERAR DADOS (INSERÇÃO / CREATE) ===
 
 # Se o usuário clicar em "Gerar Dados (Simulação)" na barra lateral, executa este bloco:
 if menu == "Gerar Dados (Simulação)":
@@ -61,14 +61,14 @@ if menu == "Gerar Dados (Simulação)":
                 "regiao": fake.state_abbr(),                 # Inventa uma sigla de estado (SP, RJ, TO...).
                 "status": "Em processamento"                 # Todos começam com o mesmo status padrão.
             }
-            # Insere o documento JSON diretamente dentro da nossa tabela no MongoDB Cloud.
+            # Insere o documento JSON diretamente dentro da tabela no MongoDB Cloud.
             col.insert_one(doc)
             
         # Mostra um aviso verde na tela dizendo que os dados foram salvos com sucesso.
         st.success(f"{qtd} pedidos inseridos com sucesso!")
 
 
-# === 5. MÓDULO 2: VISUALIZAR (CONSULTA / READ) ===
+# === 5. VISUALIZAR (CONSULTA / READ) ===
 
 # Se o usuário clicar em "Visualizar Pedidos", executa este bloco:
 elif menu == "Visualizar Pedidos":
@@ -95,20 +95,20 @@ elif menu == "Visualizar Pedidos":
         st.warning("Nenhum dado encontrado. Vá em 'Gerar Dados' primeiro.")
 
 
-# === 6. MÓDULO 3: GERENCIAR ESTOQUE (EDIÇÃO, EXCLUSÃO E CONCATENAÇÃO) ===
+# === 6. GERENCIAR ESTOQUE (EDIÇÃO, EXCLUSÃO E CONCATENAÇÃO) ===
 
 # Se o usuário clicar em "Gerenciar Estoque", executa este bloco:
 elif menu == "Gerenciar Estoque":
     st.header("🛠️ Operações de Dados e Integração Logística")
     
-    # Busca os pedidos atuais no MongoDB para podermos alterar ou cruzar.
+    # Busca os pedidos atuais no MongoDB para alterar ou cruzar.
     dados = list(col.find({}, {"_id": 0}))
     
     if dados:
         # Converte os dados do banco em uma tabela do Pandas para manipulação.
         df_mongo = pd.DataFrame(dados)
         
-        # --- PARTE A: EXCLUSÃO EM MASSA (DELETE) ---
+        # --- EXCLUSÃO EM MASSA (DELETE) ---
         st.subheader("1. Modificar Dados (Exclusão por Região)")
         
         # Cria uma caixinha de seleção apenas com os estados que existem de verdade na tabela.
@@ -126,7 +126,7 @@ elif menu == "Gerenciar Estoque":
         # Coloca uma linha horizontal divisória na tela para organizar o visual.
         st.markdown("---")
 
-        # --- PARTE B: CONCATENAÇÃO DE DADOS (MERGE / REQUISITO DE BIG DATA) ---
+        # --- CONCATENAÇÃO DE DADOS (MERGE / REQUISITO DE BIG DATA) ---
         st.subheader("2. Concatenação de Fontes (Simulação de Big Data / Omnichannel)")
         st.write("Aqui simulamos a união dos dados de vendas (MongoDB na Nuvem) com uma tabela externa de prazos logísticos.")
         
@@ -148,7 +148,7 @@ elif menu == "Gerenciar Estoque":
             # Mostra a nova tabela gigante unificada na tela.
             st.dataframe(df_consolidado, use_container_width=True)
             
-            # Coloca um balão azul explicativo para enriquecer a apresentação do projeto.
+            # Coloca um balão azul explicativo para a apresentação do projeto.
             st.info("💡 **Insight de Logística:** O gestor agora consegue ver o prazo de entrega real combinado com o valor do produto para priorizar despachos de alto valor para regiões distantes.")
             
     # Se tentarem gerenciar o estoque com o banco zerado, mostra este aviso:
