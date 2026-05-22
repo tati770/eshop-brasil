@@ -1,8 +1,8 @@
 # E-Shop Brasil - Gestão de Dados e Logística Omnichannel
 
 ## 1. Introdução
-Este trabalho aborda as dificuldades enfrentadas pela empresa E-shop Brasil, uma das maiores plataformas de e-commerce do país, que enfrenta desafios significativos como o crescimento do comércio eletrônico, que aumentou significativamente a quantidade de dados gerados diariamente pela empresa. Sendo estes relacionados à gestão de dados, personalização da experiência do cliente e otimização logística. Com base nos estudos realizados, encontramos soluções inovadoras utilizando tecnologias avançadas de Banco de Dados e Big Data, visando apoio às áreas de marketing, vendas e operações da empresa.
-O objetivo é desenvolver uma solução que utilize tecnologias de banco de dados avançadas (SQL, NoSQL) e Big Data para melhorar a gestão de dados e a logística da E-Shop Brasil, garantindo a segurança dos dados dos clientes, oferecendo experiências personalizadas e otimizando a entrega de produtos de forma eficiente e escalável. A aplicação oferece uma solução de tomada de decisão em tempo real, permitindo aos gestores visualizar gargalos de entrega correlacionados com o faturamento das vendas.
+Este trabalho aborda as dificuldades enfrentadas pela empresa E-shop Brasil, uma das maiores plataformas de e-commerce do país, que enfrenta desafios significativos como o crescimento do comércio eletrônico, que aumentou significativamente a quantidade de dados gerados diariamente pela empresa. Sendo estes relacionados à gestão de dados, personalização da experiência do cliente e otimização logística. Com base nos estudos realizados, encontraremos soluções inovadoras utilizando tecnologias avançadas de Banco de Dados e Big Data, visando apoio às áreas de marketing, vendas e operações da empresa.
+O objetivo é desenvolver uma solução que utilize tecnologias de banco de dados avançadas (SQL, NoSQL) e Big Data para melhorar a gestão de dados e a logística da E-Shop Brasil, garantindo a segurança dos dados dos clientes, oferecendo experiências personalizadas e otimizando a entrega de produtos de forma eficiente e escalável.
 
 ---
 
