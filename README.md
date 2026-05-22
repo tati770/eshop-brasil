@@ -9,7 +9,7 @@ O objetivo é desenvolver uma solução que utilize tecnologias de banco de dado
 ## 2. Tecnologias Utilizadas
 * **Python 3.13:** Linguagem base para desenvolvimento do script de dados.
 * **Streamlit:** Framework utilizado para a construção da interface gráfica interativa de forma rápida e responsiva.
-* **MongoDB Atlas (Cloud):** Banco de Dados NoSQL ideal para Big Data e documentos JSON flexíveis. Optou-se pela arquitetura em nuvem distribuída (SaaS) para garantir alta disponibilidade, escalabilidade horizontal e isolamento de recursos da máquina local.
+* **MongoDB Atlas (Cloud):** Banco de Dados NoSQL ideal para Big Data e documentos JSON flexíveis. Optou-se pela arquitetura em nuvem distribuída (SaaS) para garantir alta disponibilidade, escalabilidade horizontal e isolamento de recursos da máquina local. O MongoDB Atlas foi utilizado neste projeto como alternativa ao MongoDB local, pois o notebook utilizado apresentou limitações para executar corretamente o ambiente Docker. Dessa forma, o Atlas permitiu a utilização do banco de dados em nuvem de maneira prática e eficiente, mantendo todas as funcionalidades da aplicação. Além disso, a plataforma oferece fácil integração com Python e Streamlit, além de recursos de escalabilidade, segurança e disponibilidade importantes para aplicações modernas.
 * **Pandas:** Biblioteca de alto desempenho para manipulação, limpeza e concatenação de matrizes de dados.
 * **Faker:** Biblioteca para geração automatizada de dados volumosos sintéticos e realistas (Simulação de Big Data).
 * **Docker & Docker Compose:** Ferramentas de conteinerização integradas ao projeto para fins de portabilidade do ambiente de desenvolvimento.
